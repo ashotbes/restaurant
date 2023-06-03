@@ -8,6 +8,11 @@
     padding: 1rem 2rem;
 }
 
+body .hidden {
+    overflow: hidden;
+}
+
+
 .app__navbar-logo {
     display: flex;
     justify-content: flex-start;
@@ -70,7 +75,7 @@
     height: 100vh;
     background: var(--color-black);
     transition: .5s ease;
-
+    overflow: hidden;
     flex-direction: column;
     z-index: 5;
 }

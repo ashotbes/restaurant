@@ -1,9 +1,14 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: [],
+// eslint-disable-next-line no-undef
+module.exports = {
+  content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
-    extend: {},
+    extend: {animation: {
+        'bounce-slow': 'bounce 2s infinite ',
+        'bounce-fast': 'bounce 0.5s infinite',
+      },
+    },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-animated')],
 }
 
