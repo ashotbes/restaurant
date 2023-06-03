@@ -10,6 +10,9 @@ const Navbar = () => {
     const setBodyOverflowHidden = () => {
         document.body.style.overflow = 'hidden';
     }
+    const setBodyOverflowScroll = () => {
+        document.body.style.overflow = 'visible';
+    }
 
     return (
         <nav className="app__navbar">
@@ -32,7 +35,7 @@ const Navbar = () => {
                 <GiHamburgerMenu color="#fff" fontSize={27} onClick={() => {setToggleMenu(true); setBodyOverflowHidden()}} />
                 {toggleMenu && (
                     <div className="app__navbar-smallscreen_overlay flex__center slide-bottom">
-                        <MdOutlineRestaurantMenu fontSize={27} className="overlay__close" onClick={() => setToggleMenu(false)} />
+                        <MdOutlineRestaurantMenu fontSize={27} className="overlay__close" onClick={() => {setToggleMenu(false); setBodyOverflowScroll()}} />
                         <ul className="app__navbar-smallscreen_links">
                             <li><a href="#home" onClick={() => setToggleMenu(false)}>Home</a></li>
                             <li><a href="#about" onClick={() => setToggleMenu(false)}>About</a></li>
